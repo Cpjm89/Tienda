@@ -1,5 +1,230 @@
+/*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;700&family=Press+Start+2P&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Honk&family=Oswald:wght@200..700&display=swap');
+
+:root{
+    --tipografia1: "Oswald", sans-serif;
+    --tipografia2: "Exo 2", sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body{
     height: 100vh;
     background: url(/assets/Purp-Blue2.svg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: var(--tipografia1);
+    font-size: 1.8rem;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px;
+    font-weight: 600;
+    font-family: var(--tipografia2)
+}
+
+
+button {
+    cursor: pointer;
+    font-family: var(--tipografia2);
+    font-weight: 500;
+}
+
+#button {
+    border-radius: 15px;
+    
+    height: 45px;
+    min-width: 130px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header {    
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #000000;
+    opacity: .6;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.main-container > section {
+    width: calc(100%/2);
+}
+
+.no-products-message {
+    font-family: var(--tipografia2);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    color: #999;
+}
+
+.products-container {
+     max-height: 50vh; /* Altura máxima */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* Estilo a barra de desplazamiento */
+.products-container::-webkit-scrollbar {
+    width: 8px; /* ancho de barra de desplazamiento */
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #e777dd; /* color de barra de desplazamiento */
+    border-radius: 4px; /* botde de barra de desplazamiento */
+}
+
+.products-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* color de marco de barra de desplazamiento */
+    border-radius: 4px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    color: #9747FF ;
+    width: calc(100%/4);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.card-container--info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: var(--tipografia2);
+    margin-top: 10px;
+}
+
+.card-container--value{
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+.img-container{
+    border-color:3px #000000;
+}
+
+.form-container{
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+    flex-direction: column;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: 0 none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.button-submit{
+    background-color:#0062ff;
+    color:#FFFFFF ;
+    border-color: #ccc;
+}
+
+.button-clear{
+    background-color: #ffc2c2;
+    color:#03318C ;
+}
+
+.footer-container {
+    background-color: #000000;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.footer-container > p, small {
+    color:#FFFFFF ;
+    font-family: var(--tipografia2)
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-container > section {
+        width: 100%; 
+        margin: 2rem 0 ;
+    }
+
+    .form-container {
+        padding: 2rem;
+    }
+
+    .card {
+        width: calc(100% - 20px); 
+        margin-bottom: 15px; 
+    }
+
+    .button-container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .footer-container > p,
+    .footer-container > small {
+        font-size: 14px;
+    }
 }
